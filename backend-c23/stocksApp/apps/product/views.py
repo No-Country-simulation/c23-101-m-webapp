@@ -1,4 +1,6 @@
 from rest_framework.viewsets import ModelViewSet
+from django.db import models
+from rest_framework.decorators import action 
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
 

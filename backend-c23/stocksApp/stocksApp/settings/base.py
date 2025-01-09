@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 # Modelo user modificado
-AUTH_USER_MODEL = 'users.User'
+AUTH_USER_MODEL = 'users.CustomUser'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -33,7 +33,7 @@ THIRD_APPS = [
 
 LOCAL_APPS = [
     'stocksApp',
-    'apps.user',
+    'apps.users',
     'apps.product',
     'apps.sales',
 ]
