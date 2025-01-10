@@ -1,5 +1,6 @@
 import os
 from pathlib import Path
+from datetime import timedelta
 
 # Modelo user modificado
 AUTH_USER_MODEL = 'users.CustomUser'
@@ -29,6 +30,7 @@ BASE_APPS = [
 THIRD_APPS = [
     'rest_framework',
     'corsheaders',
+    'rest_framework_simplejwt',
 ]
 
 LOCAL_APPS = [
@@ -87,6 +89,25 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30), #Vida util del token, luego debera usar un token de actualizacion para obtener un nuevo token de acceso
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),    #Validez del token de actualizacion
+    'ALGORITHM': 'HS256',                           #Algoritmo de encriptacion
+    'SIGNING_KEY': 'SECRET_KEY',                    #Clave secreta para firmar tokens. Almacenar en variables de entorno o servicio de gestion secreto 
+                                                    #como AWS Secret Manager o Kubernetes Secrets
+    'AUTH_HEADER_TYPES': ('Bearer',),
+    'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+}
 
 
 # Internationalization
