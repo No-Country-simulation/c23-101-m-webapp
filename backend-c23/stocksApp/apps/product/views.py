@@ -2,6 +2,8 @@ from rest_framework.viewsets import ModelViewSet
 from django.db import models
 from rest_framework.decorators import action 
 from .models import Product, Category
+from rest_framework.response import Response
+from .models import Product
 from .serializers import ProductSerializer, CategorySerializer
 
 class ProductViewSet(ModelViewSet):

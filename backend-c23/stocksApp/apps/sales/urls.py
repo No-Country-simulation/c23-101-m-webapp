@@ -1,5 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
+from .views import SaleViewSet, ProfitReportViewSet
 
 router = DefaultRouter()
 router.register(r'sales', SaleViewSet, basename='sales')
