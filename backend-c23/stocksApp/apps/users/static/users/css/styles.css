@@ -1,0 +1,55 @@
+/*TODO Body*/
+@font-face {
+    font-family: 'Panton';
+    src: url('{% static "fonts/PantonNarrow-Trial-Regular.ttf" %}') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: rgb(231, 191, 158);
+    font-family: 'Panton', sans-serif;
+}
+
+/*TODO Container-Login-Form*/
+.container {
+    width: auto;
+    padding: 20px;
+    border: 1px solid #d46c0a;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: #fff9c7;
+    text-align: center;
+}
+
+/*TODO Login-Button, Register-Button*/
+.submit-login-button, .submit-register-button {
+    background-color: #d8b43e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.submit-login-button:hover {
+    background-color: #bf5800;
+    transform: scale(1.05);
+}
+
+.submit-login-button:active {
+    background-color: #a94e00;
+    transform: scale(1);
+}
+

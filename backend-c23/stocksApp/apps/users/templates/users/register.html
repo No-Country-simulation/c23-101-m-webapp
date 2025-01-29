@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'users/css/styles.css' %}">
+</head>
+    <body>
+        <div class="container">
+            <h2>Register</h2>
+            <form method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if form.errors %}
+                    <div class="error">
+                        <p>Invalid username or password. Please try again.</p>
+                    </div>
+                {% endif %}
+                <button class="submit-register-button" type="submit">Register</button>
+            </form>
+    </body>
+</html>

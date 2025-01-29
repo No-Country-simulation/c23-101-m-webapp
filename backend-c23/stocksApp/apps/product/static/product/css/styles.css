@@ -1,0 +1,305 @@
+body{
+	background-color: #f2e9d5;
+	font-family: SegoeUI, arial, sans-serif;
+}
+
+h1{
+	text-align: center;
+	font-family: SegoeUI, arial, sans-serif;
+}
+
+header{
+	
+	width:100%;
+	height: auto;
+	background-color:#d9bd07;
+	display: flex;
+	flex-direction: rox;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.logo{
+	
+	width:10%;
+	height: auto;
+	
+}
+
+.logo img{
+
+	width: 100%;
+	margin: auto;
+
+}
+
+nav{
+	width:60%;
+	height: 50%;
+	display:flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+nav a:link, nav a:visited, .bot_alta:link, .bot_alta:visited {
+    color: #96821a;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+}
+
+nav a::after, .bot_alta::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    right: 0;
+    background: #96821a;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+nav a:hover::after, .bot_alta:hover::after {
+    width: 100%;
+    left: 0;
+    background: #57501a;
+}
+
+nav a:hover, .bot_alta:hover {
+    color: #57501a;
+    font-size: 23px;
+    background-color: rgba(236, 218, 134, 0.1);
+}
+
+main{
+	width:98%;
+	height:auto;
+	display:flex;
+	align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+	width:50%;
+	height:auto;
+	color:#c9b008;
+	background-color:#f0eed1;
+	border-radius:10px;
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.er{
+	
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+	
+}
+
+.productos{
+	width:98%;
+	height:auto;
+	display:flex;
+     flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.alta{
+	width: 80%;
+	height: auto;
+	display: flex;
+	align-items: center;
+     flex-direction: column;
+     margin-bottom: 20px;
+}
+
+.alta_muestra{
+	width: 20%;
+	height: auto;
+	background-color: #d4c650;
+	padding: 10%;
+	margin-left: 5%;
+	font-size: 25px;
+	text-align: justify;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #8c7d1c;
+}
+
+.inalta, .desalta{
+
+	width: 40%;
+	margin-bottom: 10px;
+	text-align: center;
+	border-radius: 20px;
+	background-color: #f5e6b3;
+
+}
+
+.desalta{
+	width: 60%;
+
+}
+
+.bus{
+	margin: auto;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.item{
+	width:15%;
+	display: flex;
+	overflow: hidden;
+	border-radius:20px;
+	border-style:solid;
+	border-color:#6e6004;
+	border-width:2px;
+	margin-bottom: 20px;
+	background-color:#edff78;
+	transition: box-shadow 0.5s;
+	flex-wrap: wrap;
+}
+
+.item:hover{
+     box-shadow: 0px 0px 15px #8c7d1c;
+	 
+}
+
+.foto{
+     width: 100%;
+	height: auto;
+
+}
+
+.foto img{
+	 width: 100%;
+	 border-radius: 18px;
+}
+
+.texto{
+   width: 90%;
+   height:auto;
+   text-align: center;
+   margin:auto;
+}
+
+.texto p{
+
+	text-align: left;
+
+}
+
+.precio{
+
+	color: #734305;
+}
+
+p{
+	
+	text-align: justify;
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+footer{	
+	width:100%;
+	height: auto;
+	background-color:#d9bd07;
+	display: flex;
+	justify-content: space-between;
+     align-items: center;
+}
+
+.info p{
+
+	color:#96821a;
+
+}
+
+.foto_er{
+	width: 25%;
+	height: auto;
+	padding: 30px;
+}
+/* Ampliar */
+
+.ampliar{
+	display: flex;
+	width: 58%;
+	height: auto;
+	background-color: #c7b406;
+	padding: 2%;
+	margin-bottom: 50px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #595211;
+}
+
+.texto_amp{
+	width: 70%;
+	height: auto;
+	background-color: #d4c650;
+	padding: 10%;
+	margin-left: 5%;
+	font-size: 25px;
+	text-align: justify;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #8c7d1c;
+}
+
+.foto_amp{
+	width: 50%;
+	height: auto;
+	padding: 30px;
+}
+
+.foto_amp img, .foto_er img{
+	width: 100%;
+	margin: auto;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px #8c7d1c;
+}
+
+.texto_amp p{
+	color: #96821a;
+}
+
+.bot_alta{
+	overflow: hidden;
+
+}
+
+.texto_amp a:link, .texto_amp a:visited{
+	text-decoration: none;
+	color: #96821a;
+	font-size:20px;
+	height:20px;
+	text-align:center;
+	text-decoration:none;
+	height: 15%;	
+	transition:color 0.9s, font-size 0.9s;
+}
+.texto_amp a:hover{
+	color:#57501a;
+	font-size:23px;
+}
+
+
+#marca, #desc, #precio{
+	
+	display:none;
+	
+	
+}
