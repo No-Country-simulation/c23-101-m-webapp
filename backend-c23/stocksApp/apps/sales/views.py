@@ -1,6 +1,9 @@
 from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
+from django.db import models
+from .models import Sale, ProfitReport
+from .serializers import SaleSerializer, ProfitReportSerializer
 
 class SaleViewSet(viewsets.ModelViewSet):
     queryset = Sale.objects.all()

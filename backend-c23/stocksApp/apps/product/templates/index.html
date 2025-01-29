@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	{% load static %}
+	<head>
+		<meta charset="utf-8">
+		<title>Productos</title>
+		<link rel="stylesheet" href="{% static 'product/css/styles.css' %}">
+	</head>
+<body>
+	<header>	
+		<nav> 
+			<a href="{% url 'products-list' %}" title="Listado de Productos">Listado</a>
+		</nav>
+	</header>
+	<main>
+		<div class="titulo">
+			<h2>Listado de productos</h2>
+		</div>
+		<div class="productos">	
+			{% for product in products %}
+			<div class='item'>
+				<div class='foto'>
+					<img src="{% static '/media/products/' %}{{ product.name }}.png" alt="{{ product.name }}">					
+				</div>
+				<div class='texto'>
+					<p>{{ product.name }}</p>
+					<p class='precio'>{{ product.purchase_price }}</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		</main>
+		<footer>
+			<div class="info">
+				<p>Wolf Tartar 5345, B8923, Provincia de Buenos Aires</p>
+				<p>Telefono: 0123456789</p>
+			</div>
+		</footer>
+</body>
+</html>

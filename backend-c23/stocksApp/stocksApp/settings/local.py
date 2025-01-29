@@ -10,8 +10,12 @@ ALLOWED_HOSTS = []
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "Your_BD_Name",
+        "USER": "Your_Username",
+        "PASSWORD": "Your_Password",
+        "HOST": "localhost",
+        "PORT": "3306",
     }
 }
 
