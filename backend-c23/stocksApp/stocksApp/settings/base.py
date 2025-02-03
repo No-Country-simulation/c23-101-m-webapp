@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 
+
 # Modelo user modificado
 AUTH_USER_MODEL = 'users.CustomUser'
 
@@ -48,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'stocksApp.urls'
@@ -114,6 +116,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'product/static'),  # Carpeta de archivos estáticos en la raíz del proyecto
     os.path.join(BASE_DIR, 'sales/static'),  # Carpeta de archivos estáticos en la raíz del proyecto
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 CORS_ORIGIN_ALLOW_ALL = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_ORIGINS = True
